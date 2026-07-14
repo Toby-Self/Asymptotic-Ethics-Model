@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Toby-Self/asymptotic-ethics",
+  "description": "MCP server for an Asymptotic Ethics governance simulation with a verified compliance oracle.",
+  "repository": {
+    "url": "https://github.com/Toby-Self/Asymptotic-Ethics-Model",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "asymptotic-ethics-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

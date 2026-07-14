@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asymptotic-ethics-mcp"
+version = "0.1.0"
+description = "MCP server exposing an Asymptotic Ethics commons-governance simulation as callable tools, plus a stateless governance compliance oracle verified against the simulation's own logic."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "Tobias Self" }
+]
+dependencies = [
+    "mesa",
+    "numpy",
+    "networkx",
+    "mcp",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/Toby-Self/Asymptotic-Ethics-Model"
+Findings = "https://github.com/Toby-Self/Asymptotic-Ethics-Model/blob/main/FINDINGS.md"
+
+[project.scripts]
+asymptotic-ethics-mcp = "asymptotic_ethics_mcp_server:main"
+
+[tool.hatch.build]
+include = [
+    "asymptotic_ethics_model.py",
+    "asymptotic_ethics_mcp_server.py",
+    "governance_compliance.py",
+    "reference_gateway.py",
+    "README.md",
+    "FINDINGS.md",
+]
